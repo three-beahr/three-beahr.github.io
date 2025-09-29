@@ -1,7 +1,7 @@
 ---
-layout: post
-title:  "My Very First Haskell Post"
-date:   2025-07-23 10:30:00
+layout: default
+title: "My Very First Haskell Post"
+date: 2025-07-22
 ---
 
 # Hello everyone! 
@@ -62,4 +62,4 @@ main = putStrLn bI
        >> putStrLn sI
 ```
 
-And that's it! That was my first Haskell file! Now it's been turned into a legible Haskell file.
+And that's it! That was my first Haskell file! I also added this text to it, so now it's been turned into a legible Haskell file.
