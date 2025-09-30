@@ -12,9 +12,10 @@ I fell off the Haskell wagon it would seem, but now I'm back and better than nev
 
 An interesting thing I wanted to bring up is the concept of **kinds**. I ran across it today when erroneously trying to annotate a function by including parameters rather than simply including types - something common to languages with which I am familiar (e.g. Python, C). After using `:t` on pretty much everything in GHCI (partially because I'm still not quite clear on the whole `=>` vs. `->` business), I think my brain started associating **type annotations** with parameters. Since I only really knew Prelude functions involving lists to start, I saw `[a]` is used in place of inputs regarding lists. As a result, I tried something like:
 
-```emailwrapper username site = concat (concat (concat username "@") site) ".com"
+```
+emailwrapper username site = concat (concat (concat username "@") site) ".com"
      where concat :: String str -> String str ->  String str
-           concat base addition = base ++ addition 
+           concat base addition = base ++ addition
 ```
 
 and was confronted with an error from the VS Code Haskell extension: `Expected kind ‘k0 -> *’, but ‘String’ has kind ‘*’`. So obviously I decided to investigate what a kind was to better understand this. After searching around a bit, it seems like kinds are abstractions meant to better describe classes of  constructors, specifically **type constructors**. From the [Wikipedia page](https://en.wikipedia.org/wiki/Kind_(type_theory)), we get the sense that there are enough various constructors in functional programming that this is at least slightly important. Of particular note for me was the form of classifying these type constructors:
