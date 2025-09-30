@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "A: What do you do when I'm gone? B: ....wait for you to get back"
 date: 2025-09-28
 ---
